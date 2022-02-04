@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="icon" type="x-icon" href="icon/favicon.png">
+            <title>Regular Polygon Angle Finder</title>
+        </head>
+        <body>
+            <script>
+                function getTheNumberAndThenAnswer() {
+                    var p = document.getElementById("poly").value;
+                    var vv = (p - 2) * 180; 
+                    var v = ((p - 2) * 180) / p; 
+                    document.getElementById("input").innerHTML = p + " sides";
+                    document.getElementById("output").innerHTML = v + "°";
+                    document.getElementById("allangles").innerHTML = vv + "°";
+                }
+            </script>
+            <input id="poly" type="number">
+            <input type="button" onclick="getTheNumberAndThenAnswer()" value="enter">
+            <br>You inputted:<div id="input"></div>
+            The measure of one angle is:<div id="output"></div>
+            All of the angles add up to:<div id="allangles"></div>
+        </body>
+    </html>
